@@ -2,10 +2,12 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import chatRoute from "./routes/chatRoute.mjs";
+import messageRoute from "./routes/messageRoute. js";
 
 const app = express();
 app.use(express.json);
 app.use("/chat", chatRoute);
+app.use("/message", messageRoute);
 
 app.use(cors());
 
